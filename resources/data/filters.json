@@ -1,0 +1,96 @@
+[{
+    id          : 1,
+    expanded    : true,
+    name        : 'West Process',
+    count       : 3000,
+    description : 'High balance Califormia',
+    kids        : [{ 
+        id          : 11,
+        expanded    : true,
+        name        : 'California Group',
+        count       : 1000,
+        description : 'High balance Califormia',
+        kids        : [{
+            id          : 111,            
+            leaf        : true,
+            name        : 'High Balance',
+            exportfile  : '',
+            count       : '<label style="color:grey">1000</label>',
+            exported    : '',
+            modified    : '07/12/2014',
+            description : 'High balance Califormia',
+            exporttpl   : 'hibal.DAT'
+        },{
+            id          : 112,
+            leaf        : true,
+            name        : 'Low Balance',
+            exportfile  : 'lobal-121343546.DAT',
+            count       : 1000,
+            exported    : '07/12/2014',
+            modified    : '07/12/2014',
+            description : 'Low balance California',
+            exporttpl   : 'lobal.DAT'
+        }]
+    },{
+        id          : 12,
+        expanded    : true,
+        name        : 'Oregon Group',
+        count       : 2000,
+        description : 'Priority Oregon',
+        kids        : [{
+            id          : 121,
+            leaf        : true,
+            name        : 'Priority',
+            exportfile  : 'Priority-11334356.DAT',
+            count       : 1000,
+            exported    : '07/12/2014',
+            modified    : '07/12/2014',
+            description : 'Priority Oregon',
+            exporttpl   : 'Priority.DAT'
+        },{
+            id          : 122,
+            leaf        : true,
+            name        : 'Priority',
+            exportfile  : 'Priority-121343546.DAT',
+            count       : 1000,
+            exported    : '07/12/2014',
+            modified    : '07/12/2014',
+            description : 'Priority Oregon',
+            exporttpl   : 'Priority.DAT'
+        }]
+    }]
+},{
+    id          : 2,
+    expanded    : true,
+    name        : 'East Process',
+    count       : 2000,
+    description : 'High balance NY',
+    kids : [{
+        id          : 21,
+        expanded    : true,
+        name        : 'New York Group',
+        count       : 2000,
+        description : 'High balance NY',
+        kids : [{
+            id          : 221,
+            leaf        : true,
+            name        : 'High Balance',
+            exportfile  : 'hibal.DAT',
+            count       : 1000,
+            exported    : '07/12/2014',
+            modified    : '07/12/2014',
+            description : 'High balance NY',
+            exporttpl   : 'hibal.DAT'
+        },{
+            id          : 222,
+            leaf        : true,
+            name        : 'Low Balance',
+            exportfile  : 'lobal.DAT',
+            count       : 1000,
+            exported    : '07/12/2014',
+            modified    : '07/12/2014',
+            description : 'Low balance NY',
+            exporttpl   : 'lobal.DAT'
+        }]
+    }]
+}]

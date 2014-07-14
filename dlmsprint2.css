@@ -1,0 +1,17 @@
+.add     { background:url(resources/images/add.gif)     !important; }
+.save    { background:url(resources/images/save.png)    !important; }
+.delete  { background:url(resources/images/delete.png)  no-repeat !important; }
+.refresh { background:url(resources/images/refresh.png) no-repeat !important; }
+.pencil  { background:url(resources/images/pencil.png)  no-repeat !important; }
+.account { background:url(resources/images/account.png) !important; }
+.filter  { background:url(resources/images/filter.png)  !important; }
+.loop    { background:url(resources/images/loop.png)    !important; }
+.lists   { background:url(resources/images/lists6.png)  !important; }
+.export  { background:url(resources/images/export.png)  no-repeat !important; }
+
+.x-action-col-icon {
+    /*height: 16px;
+    width: 16px;*/
+    margin-left: 6px;
+    margin-right: 6px;
+}
