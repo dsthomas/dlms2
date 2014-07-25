@@ -48,7 +48,7 @@ Ext.define('dlmsprint2a.view.FilterGrid', {
         width  : 30,
         items  : [{
             getClass : function (v, meta, rec) {
-                return rec.getDepth() < 3 ? 'add' : '';
+                return rec.getDepth() < 3 ? 'add' : 'copy';
             },
             tooltip  : 'Add',
         }],
@@ -57,7 +57,7 @@ Ext.define('dlmsprint2a.view.FilterGrid', {
         text      : 'Filter',
         locked    : true,
         resizable : false,
-        width     : 250,
+        width     : 210,
         dataIndex : 'name',
         /*
         renderer: function (value, metaData, record) {
@@ -67,61 +67,145 @@ Ext.define('dlmsprint2a.view.FilterGrid', {
         },
         */
     },{
-        text  : 'Apply',
-        xtype : 'actioncolumn',
-        align : 'center',
-        width : 44,
-        items : [{
-            getClass : function (v, meta, rec) {
-                return 'filter';
+        text  : 'Automatic',
+        columns : [{
+            xtype     : 'checkcolumn',
+            text      : 'Enable',
+            align     : 'center',
+            width     : 44,
+            //dataIndex : 'stamp',
+        },{
+            text: 'Mo Tu We Th Fr',
+            xtype: 'actioncolumn',
+            align: 'center',
+            width: 90,
+            defaults : {
+                //width: 16,
             },
-            tooltip  : 'Apply',
-        }]
-    },{
-        resizable : false,
-        text      : 'Accounts',
-        align     : 'right',
-        width     : 90,
-        dataIndex : 'count',
-    },{
-        text  : 'Export',
-        xtype : 'actioncolumn',
-        align : 'center',
-        width : 44,
-        items  : [{
-            getClass : function (v, meta, rec) {
-                return 'export';
+            items: [{
+                tooltip: 'Sort spec',
+                getClass: function (v, meta, rec) {
+                    return rec.getDepth() > 2 ? 'checkbox' : '';
+                },
+            },{
+                tooltip: 'Sort spec',
+                getClass: function (v, meta, rec) {
+                    return rec.getDepth() > 2 ? 'checkbox' : '';
+                },
+            },{
+                tooltip: 'Sort spec',
+                getClass: function (v, meta, rec) {
+                    return rec.getDepth() > 2 ? 'checkbox' : '';
+                },
+            },{
+                tooltip: 'Sort spec',
+                getClass: function (v, meta, rec) {
+                    return rec.getDepth() > 2 ? 'checkbox' : '';
+                },
+            },{
+                tooltip: 'Sort spec',
+                getClass: function (v, meta, rec) {
+                    return rec.getDepth() > 2 ? 'checkbox' : '';
+                },
+            }]
+        },{
+            text: 'Sa Su',
+            xtype: 'actioncolumn',
+            align: 'center',
+            width: 40,
+            defaults : {
+                //width: 16,
             },
-            tooltip  : 'Export',
+            items : [{
+                tooltip: 'Clause',
+                getClass: function (v, meta, rec) {
+                    return rec.getDepth() > 2 ? 'checkbox' : '';
+                },
+            },{
+                getClass: function (v, meta, rec) {
+                    return rec.getDepth() > 2 ? 'checkbox' : '';
+                },
+                getTip: function (v, meta, rec) {
+                    return 'condition2';
+                },
+            }],
+        },{
+            text  : 'Time',
+            //xtype : 'timefield',
+            align : 'center',
+            width : 42,
+            dataIndex : 'time',
         }],
     },{
-        text      : 'Exported as ...',
-        text      : '... As',
-        resizable : false,
-        width     : 180,
-        dataIndex : 'exportfile',
+        text  : 'Manual',
+        columns : [{
+            text  : 'Apply',
+            xtype : 'actioncolumn',
+            align : 'center',
+            width : 44,
+            items : [{
+                getClass : function (v, meta, rec) {
+                    return 'filter';
+                },
+                tooltip  : 'Apply',
+            }]
+        },{
+            text  : 'Export',
+            xtype : 'actioncolumn',
+            align : 'center',
+            width : 44,
+            items  : [{
+                getClass : function (v, meta, rec) {
+                    return 'export';
+                },
+                tooltip  : 'Export',
+            }],
+        }],
     },{
-        align     : 'center',
-        width     : 70,
-        resizable : false,
-        summaryType: 'max',
-        renderer: Ext.util.Format.dateRenderer('m/d/Y'),
-        field: {
-            xtype: 'datefield'
-        },
-        text      : 'Exported',
-        dataIndex : 'exported',
+        text      : 'Result',
+        columns   : [{
+            resizable : false,
+            text      : 'Accounts',
+            align     : 'right',
+            width     : 60,
+            dataIndex : 'count',
+        },{
+            text      : '... As',
+            text      : 'Export File',
+            resizable : false,
+            width     : 140,
+            dataIndex : 'exportfile',
+        },{
+            text  : 'D/L',
+            xtype : 'actioncolumn',
+            align : 'center',
+            width : 27,
+            items : [{
+                getClass : function (v, meta, rec) {
+                    return rec.get('exportfile') ? 'download' : '';
+                },
+                tooltip  : 'Download',
+            }],
+        }],
     },{
-        align     : 'center',
-        width     : 70,
-        resizable : false,
-        summaryType: 'max',
-        renderer: Ext.util.Format.dateRenderer('m/d/Y'),
-        field: {
-            xtype: 'datefield'
+        text: 'Track',
+        defaults: {
+            width : 100,
+            align     : 'center',
+            resizable : false,
+            summaryType: 'max',
+            //renderer: Ext.util.Format.dateRenderer('m/d/Y HH:MM'),
+            field: {
+                xtype: 'datefield'
+            },
         },
-        text      : 'Modified',
-        dataIndex : 'modified',
+        columns : [{
+            text      : 'Exported',
+            dataIndex : 'exported',
+        },{
+            text      : 'Modified',
+            dataIndex : 'modified',
+        }],
     },{
         text     : '',
         align  : 'center',

@@ -8,10 +8,13 @@
 .loop    { background:url(resources/images/loop.png)    !important; }
 .lists   { background:url(resources/images/lists6.png)  !important; }
 .export  { background:url(resources/images/export.png)  no-repeat !important; }
+.checkbox { background:url(resources/images/checked.gif)  no-repeat !important; }
+.download { background:url(resources/images/download.png)  no-repeat !important; }
+.copy    { background:url(resources/images/copy.png)  no-repeat !important; }
 
 .x-action-col-icon {
     /*height: 16px;
     width: 16px;*/
-    margin-left: 6px;
-    margin-right: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
 }

@@ -17,8 +17,9 @@
             exportfile  : '',
             count       : '<label style="color:grey">1000</label>',
             exported    : '',
-            modified    : '07/12/2014',
+            modified    : '07/12/2014 20:00',
             description : 'High balance Califormia',
+            time        : '11:00',
             exporttpl   : 'hibal.DAT'
         },{
             id          : 112,
@@ -26,9 +27,10 @@
             name        : 'Low Balance',
             exportfile  : 'lobal-121343546.DAT',
             count       : 1000,
-            exported    : '07/12/2014',
-            modified    : '07/12/2014',
+            exported    : '07/12/2014 20:00',
+            modified    : '07/12/2014 20:00',
             description : 'Low balance California',
+            time        : '11:00',
             exporttpl   : 'lobal.DAT'
         }]
     },{
@@ -43,9 +45,10 @@
             name        : 'Priority',
             exportfile  : 'Priority-11334356.DAT',
             count       : 1000,
-            exported    : '07/12/2014',
-            modified    : '07/12/2014',
+            exported    : '07/12/2014 20:00',
+            modified    : '07/12/2014 20:00',
             description : 'Priority Oregon',
+            time        : '11:00',
             exporttpl   : 'Priority.DAT'
         },{
             id          : 122,
@@ -53,9 +56,10 @@
             name        : 'Priority',
             exportfile  : 'Priority-121343546.DAT',
             count       : 1000,
-            exported    : '07/12/2014',
-            modified    : '07/12/2014',
+            exported    : '07/12/2014 20:00',
+            modified    : '07/12/2014 20:00',
             description : 'Priority Oregon',
+            time        : '11:00',
             exporttpl   : 'Priority.DAT'
         }]
     }]
@@ -77,9 +81,10 @@
             name        : 'High Balance',
             exportfile  : 'hibal.DAT',
             count       : 1000,
-            exported    : '07/12/2014',
-            modified    : '07/12/2014',
+            exported    : '07/12/2014 20:00',
+            modified    : '07/12/2014 20:00',
             description : 'High balance NY',
+            time        : '11:00',
             exporttpl   : 'hibal.DAT'
         },{
             id          : 222,
@@ -87,9 +92,10 @@
             name        : 'Low Balance',
             exportfile  : 'lobal.DAT',
             count       : 1000,
-            exported    : '07/12/2014',
-            modified    : '07/12/2014',
+            exported    : '07/12/2014 20:00',
+            modified    : '07/12/2014 20:00',
             description : 'Low balance NY',
+            time        : '11:00',
             exporttpl   : 'lobal.DAT'
         }]
     }]

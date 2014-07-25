@@ -64,7 +64,7 @@ Ext.define('dlmsprint2a.view.Main', {
         xtype  : 'filtergrid',
         //flex : 1,
         //hidden : true,
-        width  : 811,
+        width  : 1011,
     },{
         region     : 'center',
         xtype      : 'panel',
